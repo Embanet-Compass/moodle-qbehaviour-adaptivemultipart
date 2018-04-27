@@ -1,0 +1,9 @@
+
+{
+    "name": "embanet-compass/moodle-qbehaviour-adaptivemultipart",
+    "type": "moodle-qbehaviour",
+    "description": "Question Behaviour Plugin",
+    "extra": {
+        "installer-name": "adaptivemultipart",
+        "moodle": { "package_folder_name" : "adaptivemultipart" }
+    }
