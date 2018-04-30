@@ -1,4 +1,3 @@
-
 {
     "name": "embanet-compass/moodle-qbehaviour-adaptivemultipart",
     "type": "moodle-qbehaviour",
@@ -7,3 +6,4 @@
         "installer-name": "adaptivemultipart",
         "moodle": { "package_folder_name" : "adaptivemultipart" }
     }
+}
