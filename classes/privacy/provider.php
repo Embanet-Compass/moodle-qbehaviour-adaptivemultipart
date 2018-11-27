@@ -13,24 +13,29 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
- * Version information for the adaptive behaviour for multi-part questions.
+ * Privacy Subsystem implementation for qbehaviour_adaptivemultipart.
  *
  * @package    qbehaviour_adaptivemultipart
- * @copyright  2012 The Open University
+ * @copyright  2018 The Open University 
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
+namespace qbehaviour_adaptivemultipart\privacy;
 defined('MOODLE_INTERNAL') || die();
-
-$plugin->version   = 2018080600;
-$plugin->requires  = 2014051200;
-$plugin->cron      = 0;
-$plugin->component = 'qbehaviour_adaptivemultipart';
-$plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '4.2.1 for Moodle 3.0+';
-
-$plugin->dependencies = array(
-    'qbehaviour_adaptive' => 2014051200,
-);
+/**
+ * Privacy Subsystem for qbehaviour_adaptivemultipart implementing null_provider.
+ *
+ * @copyright  2018 The Open University 
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class provider implements \core_privacy\local\metadata\null_provider {
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return  string
+     */
+    public static function get_reason() : string {
+        return 'privacy:metadata';
+    }
+}
